@@ -40,7 +40,6 @@
           }
         }
         &__icon{
-          /*text-align: center;*/
           font-size: 16px;
           color: #ffffff;
           
@@ -71,9 +70,7 @@
     height: calc(100vh - 100px);
     width: 300px;
     background-color: #2f3e51;
-    //display: block;
-    //margin:  20px;
-   /*overflow: scroll;*/
+    
     &__groups-messages{
      height: 45px;
      width: 260px;
@@ -81,23 +78,13 @@
      padding-top: 20px;
      padding-bottom: 40px;
      padding-left: 40px;
-     color: white;
-
-    
-
-    
-
-
-    
-      
+     color: white;  
         
          &__group-name{
           height: 23px;
           width: 260px;
           margin-top: 15px;
           margin-bottom: 5px;
-          //padding: 20px;
-          //display: block;
           font-size: 15px;
           align-items: center;
           
@@ -106,9 +93,7 @@
          &__latest-message{
           height: 17px;
           width: 260px;
-          //display: block;
           font-size: 11px;
-          //padding: 11px;
           
         }
       }
@@ -119,7 +104,6 @@
 .main-chat{
   &__main-header{
     height: 100px;
-    //width: calc(100vw - 300px);
     padding:0 40px;
     background-color:  #ffffff;
     display: flex;
