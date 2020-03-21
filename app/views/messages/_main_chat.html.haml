@@ -1,0 +1,43 @@
+.main-chat
+  .main-chat__main-header
+    .main-chat__main-header__left
+      
+      .main-chat__main-header__left__group
+        test
+      .main-chat__main-header__left__member
+        member:masa
+    .main-chat__main-header__right
+      .main-chat__main-header__right__icon-box
+        = link_to "#",class: "main-chat__main-header__right__icon-box" do
+          Edit 
+
+  .main-chat__messages
+    
+    .main-chat__messages__lists1
+      .main-chat__messages__lists1__group
+        .main-chat__messages__lists1__group__member-name
+          masa 
+        .main-chat__messages__lists1__group__date
+          2020/3/17(Tue) 18:00:00
+      .main-chat__messages__lists1__text
+        コードは私の人生
+
+    .main-chat__messages__lists2
+      .main-chat__messages__lists2__group
+        .main-chat__messages__lists2__group__member-name
+          masa 
+        .main-chat__messages__lists2__group__date
+          2020/3/17(Tue) 18:30:00
+      .main-chat__messages__lists2__text
+        コードは私のビタミン
+   
+  .main-chat__form
+    %form{:action => "#", :method => "post", class: "new_message"}
+      .main-chat__form__mask
+        %input.text_area{:type => "text", :placeholder => "message"}
+        %label{class: "form__image"}
+          = icon('fas', 'image')
+          %input{class: "form__image__file", type: "file"}
+      %input.btn{:type => "submit", :value => "Send"}
+
+
