@@ -2,12 +2,12 @@
   .chat-side__side-header
     .chat-side__side-header__one
       .chat-side__side-header__one__user-name
-        masa
+        = current_user.name
       .chat-side__side-header__one__user-menu
         .chat-side__side-header__one__user-menu__new-group
-          =link_to "https://fontawesome.com/icons/edit?style=solid" do
+          =link_to do 
             = icon('far', 'edit')
-          =link_to "https://fontawesome.com/icons/cog?style=solid" do
+          =link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
         .chat-side__side-header__one__user-menu__edit-user    
           
@@ -19,3 +19,4 @@
       .groups__groups-messages__latest-message
         まだメッセージがありません
         
+
