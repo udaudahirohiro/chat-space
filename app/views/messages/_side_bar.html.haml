@@ -5,18 +5,23 @@
         = current_user.name
       .chat-side__side-header__one__user-menu
         .chat-side__side-header__one__user-menu__new-group
-          =link_to do 
+          /=link_to do 
+          =link_to new_group_path do
             = icon('far', 'edit')
+          
           =link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
         .chat-side__side-header__one__user-menu__edit-user    
           
     
   .groups
-    .groups__groups-messages
-      .groups__groups-messages__group-name
-        tech-camp
-      .groups__groups-messages__latest-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .groups-messages
+        = link_to '#' do
+          .groups-messages__group-name
+            = group.name
+          .groups__groups-messages__latest-message
+            まだメッセージがありません
+    
         
 
