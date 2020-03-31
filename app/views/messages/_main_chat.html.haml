@@ -1,14 +1,15 @@
 .main-chat
   .main-chat__main-header
     .main-chat__main-header__left
-      
       .main-chat__main-header__left__group
-        test
+        = @group.name
       .main-chat__main-header__left__member
-        member:masa
+        member :
+        - @group.users.each do |user|
+          = user.name
     .main-chat__main-header__right
       .main-chat__main-header__right__icon-box
-        = link_to "#",class: "main-chat__main-header__right__icon-box" do
+        = link_to edit_group_path(@group),class: "main-chat__main-header__right__icon-box" do
           Edit 
 
   .main-chat__messages
@@ -30,14 +31,15 @@
           2020/3/17(Tue) 18:30:00
       .main-chat__messages__lists2__text
         コードは私のビタミン
-   
+  .messages
+    = render @messages
+ 
   .main-chat__form
-    %form{:action => "#", :method => "post", class: "new_message"}
-      .main-chat__form__mask
-        %input.text_area{:type => "text", :placeholder => "message"}
-        %label{class: "form__image"}
-          = icon('fas', 'image')
-          %input{class: "form__image__file", type: "file"}
-      %input.btn{:type => "submit", :value => "Send"}
-
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
 
