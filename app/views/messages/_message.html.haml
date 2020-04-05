@@ -1,11 +1,11 @@
-.message
-  .upper-message
-    .upper-message__user-name
+.main-chat__messages__lists1
+  .main-chat__messages__lists1__group
+    .main-chat__messages__lists1__group__member-name
       = message.user.name
-    .upper-message__date
+    .main-chat__messages__lists1__group__date
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .lower-message
+  .main-chat__messages__lists1__text
     - if message.content.present?
-      %p.lower-message__content
+      %p.main-chat__messages__lists1__text
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
