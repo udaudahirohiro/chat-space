@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+
+
 .wrapper{
   display: flex;
 }
@@ -148,7 +152,7 @@
     height:  calc(100vh - 100px - 90px);
     width: calc(100vw - 260px);
     background-color: #fafafa;
-    padding: (46px 40px 0 40px);
+    padding: 46px 40px;
     overflow: scroll;
     box-sizing: border-box;
 
@@ -245,5 +249,5 @@
  
 
 
-
+}
        
