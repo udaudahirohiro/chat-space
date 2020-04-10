@@ -10,7 +10,6 @@
   width: 300px;
   &__side-header{
     height: 100px;
-    //width: 260px;
     background-color: #253141;
     display: flex;
     align-items: center;
@@ -24,7 +23,7 @@
        width: 100%;
        font-weight: bold;
        height: 20px;
-       //background-color: #333333;
+       background-color: #253141;
    
        &__user-name{
         font-weight: bold;
@@ -70,7 +69,6 @@
   
   .groups{
     height: calc(100vh - 100px);
-    width: 260px;
     background-color: #2f3e51;
     padding: 20px 20px 0;
     
